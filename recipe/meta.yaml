@@ -5,8 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: http://download.osgeo.org/gdal/{{ version }}/gdal-{{ version }}.tar.xz
-  sha256: 45b4ae25dbd87282d589eca76481c426f72132d7a599556470d5c38263b09266
+  git_url: https://github.com/OSGeo/gdal.git
   patches:
     # BUILT_AS_DYNAMIC_LIB.
     - patches/windowshdf5.patch  # [win]
@@ -23,6 +22,8 @@ requirements:
   build:
     - cmake  # [win]
     - pkg-config >=0.21  # [not win]
+    - automake  # [not win]
+    - libtool  # [not win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
