@@ -16,10 +16,6 @@ cfitsio:
 - 4.4.1
 channel_sources:
 - conda-forge
-- conda-forge
-- conda-forge
-- conda-forge/label/python_rc,conda-forge
-- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -128,7 +124,6 @@ zip_keys:
   - cdt_name
 - - python
   - numpy
-  - channel_sources
 zlib:
 - '1'
 zstd:
